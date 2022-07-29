@@ -58,39 +58,39 @@
                     amount = 1420000;
                     arbitor_percentage = 3.5;
                     arbitor_amount = 275000;
-                    break;
+                break;
                     case (main <= 50000000):
                     per = 0.80;
-                    amount = 2,27,500;
+                    amount = 227500;
                     arbitor_percentage = 1.75;
                     arbitor_amount = 450000;
                     break;
-                    case (main <= 100000000):
+                 case (main <= 100000000):
                     per = 0.45;
                     amount = 5,47,500;
                     arbitor_percentage = 1.15;
                     arbitor_amount = 1150000;
                     break;
-                    case (main <= 500000000):
+                case (main <= 500000000):
                     per = 0.20;
-                    amount = 7,72,500;
+                    amount = 772500;
                     arbitor_percentage = 0.50;
                     arbitor_amount = 1725000;
                     break;
-                    case (main <= 1000000000):
+                case (main <= 1000000000):
                     per = 0.08;
-                    amount = 15,72,500;
+                    amount = 1572500;
                     arbitor_percentage = 0.15;
                     arbitor_amount = 8725000;
                     break;
-                    case (main <= 5000000000):
+                case (main <= 5000000000):
                     per = 0.05;
-                    amount = 19,72,500;
+                    amount = 1972500;
                     arbitor_percentage = 0.05;
                     arbitor_amount = 4475000;
                     break;
-                    case (main > 5000000000):
-                    amount = 39,72,500;
+                case (main > 5000000000):
+                    amount = 3972500;
                     arbitor_percentage = 0.04;
                     arbitor_amount = 6475000;
                     break;
@@ -146,38 +146,38 @@
                         arbitor_amount = 1420000;
                         arbitor_percentage = 1.75;
                         break;
-                        case (main <= 50000000):
+                    case (main <= 50000000):
                         per = 0.80;
                         amount = 2,27,500;
                         arbitor_amount = 2,27,500;
                         arbitor_percentage = 0.80;
                         break;
-                        case (main <= 100000000):
+                    case (main <= 100000000):
                         per = 0.45;
                         amount = 5,47,500;
                         arbitor_amount = 5,47,500;
                         arbitor_percentage = 0.45;
                         break;
-                        case (main <= 500000000):
+                    case (main <= 500000000):
                         per = 0.20;
                         amount = 7,72,500;
                         arbitor_amount = 7,72,500;
                         arbitor_percentage = 0.20;
                         break;
-                        case (main <= 1000000000):
+                    case (main <= 1000000000):
                         per = 0.08;
                         amount = 15,72,500;
                         arbitor_amount = 15,72,500;
                         arbitor_percentage = 0.08;
                         break;
-                        case (main <= 5000000000):
+                    case (main <= 5000000000):
                         per = 0.05;
                         amount = 19,72,500;
                         arbitor_amount = 19,72,500;
                         arbitor_percentage = 0.05;
                         break;
-                        case (main > 500000000):
-                        per = 0.05;
+                    case (main > 500000000):
+                        //per = 0.05;
                         amount = 39,72,500;
                         break;
                     default:
@@ -197,9 +197,6 @@
                     $('#result_international').html(html);
              }
                 }   
-                
-                
-                
 // For Domestic Commercial
 $( "#commercial" ).on( "click", comercial_arbitaion );
              function comercial_arbitaion(){
