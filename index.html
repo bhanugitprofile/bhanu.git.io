@@ -15,7 +15,7 @@
         <button type="submit" onclick="international_arbitaion();" id="international">Calculate</button>
                 <div id="result_international">
                 </div>
-        <h2>DOMESTIC COMMERCIAL MEDIATION</h2>
+        <!-- <h2>DOMESTIC COMMERCIAL MEDIATION</h2>
                 Insert Amount in Dispute (in Rupees)  : <input type="number" id="comerciel_Balance" name="commerciel" value="">
         <button type="submit" onclick="comercial_arbitaion();" id="commercial">Calculate</button>
                 <div id="result_commercial">
@@ -24,7 +24,7 @@
                 Insert Amount in Dispute (in Rupees)  : <input type="number" id="intnation_comerciel_Balance" name="commerciel" value="">
         <button type="submit" onclick="intnational_comercial_arbitaion();" id="int_commercial">Calculate</button>
                 <div id="result_commercial">
-                </div>
+                </div> -->
     <script>
         //For Domestic  
         $( "#domestic" ).on( "click", domestic_arbitaion );
@@ -105,14 +105,15 @@
             var arbitor_dec = (arbitor_percentage / 100)*main; //its convert 10 into 0.10
                  arbitor_decs = arbitor_dec + arbitor_amount;
             var arbitor_discount = main - arbitor_decs;
-            //console.log(arbitor_desc);
-            
     var html = "<span>Registration Fee: <b>"+arbitor_decs+"</b></span><br>"+ 
                 "<span> Administrative Fee: <b>"+dec+"</b></span><br>";
                 //"<span>One Arbitrator's Fees (excluding expense): <b>"+arbitor_discount+"</b></span><br>";
                 $('#result_domestic').html(html);
             }
         }
+
+
+
 // For international
              $( "#international" ).on( "click", international_arbitaion );
              function international_arbitaion(){
@@ -178,6 +179,7 @@
                         break;
                     case (main > 500000000):
                         //per = 0.05;
+                        arbitor_amount = 3972500;
                         amount = 3972500;
                         break;
                     default:
@@ -193,10 +195,10 @@
                 var arbitor_discount = main - arbitor_decs;
         var html = "<span>Registration Fee: <b> "+arbitor_decs+"</b></span><br>"+ 
                     "<span> Administrative Fee: <b>"+dec+"</b></span><br>";
-                    //"<span>One Arbitrator's Fees (excluding expense): <b>"+arbitor_discount+"</b></span><br>";
                     $('#result_international').html(html);
              }
-                }   
+                } 
+                /*  
 // For Domestic Commercial
 $( "#commercial" ).on( "click", comercial_arbitaion );
              function comercial_arbitaion(){
@@ -302,6 +304,7 @@ $( "#int_commercial" ).on( "click", intnational_comercial_arbitaion );
                     $('#int_commercial').html(html);
              }
                 }
+*/
     </script>
 </body>
 </html>
