@@ -38,12 +38,12 @@
             var amount = 0; 
             // var arbitor_percentage = 0;
             // var arbitor_amount = 0; 
-            var fix_amount = 75000;
+            var fix_amount = 30000;
             switch(true) {
-                case (main < 75000):
-                    alert('Please enter valid amount');
-                    return false;
-                    break;
+                // case (main < 75000):
+                //     alert('Please enter valid amount');
+                //     return false;
+                //     break;
                 case (main <= 1000000):
                     per = 5;
                     arbitor_amount = 75000;
@@ -98,7 +98,7 @@
             //     var arbitor_decs = arbitor_dec + arbitor_amount;
             //     var arbitor_discount = main - arbitor_decs;
     var html = "<span>Registration Fee: <b>"+fix_amount+"</b></span><br>"+ 
-                "<span> Administrative Fee: <b>"+discount+"</b></span><br>";
+                "<span> Administrative Fee: <b>"+dec+"</b></span><br>";
                 //"<span>One Arbitrator's Fees (excluding expense): <b>"+arbitor_discount+"</b></span><br>";
                 $('#result_domestic').html(html);
             }
@@ -117,10 +117,10 @@
                 // var arbitor_percentage = 0;
                 // var arbitor_amount = 0;
                 switch(true) {
-                    case (main < 75000):
-                        alert('Please enter valid amount');
-                        return false;
-                    break;
+                    // case (main < 75000):
+                    //     alert('Please enter valid amount');
+                    //     return false;
+                    // break;
                     case (main <= 1000000):
                         per = 5;
                         break;
@@ -176,7 +176,7 @@
                 // var arbitor_decs = arbitor_dec + arbitor_amount;
                 // var arbitor_discount = main - arbitor_decs;
         var html = "<span>Registration Fee: <b> $"+reg_fee+"</b></span><br>"+ 
-                    "<span> Administrative Fee: <b>"+discount+"</b></span><br>";
+                    "<span> Administrative Fee: <b>"+dec+"</b></span><br>";
                     //"<span>One Arbitrator's Fees (excluding expense): <b>"+arbitor_discount+"</b></span><br>";
                     $('#result_international').html(html);
              }
@@ -195,10 +195,10 @@ $( "#commercial" ).on( "click", comercial_arbitaion );
                 var amount = 0; 
                 var reg_fee = 25000;
                 switch(true) {
-                    case (main < 75000):
-                        alert('Please enter valid amount');
-                        return false;
-                    break;
+                    // case (main < 75000):
+                    //     alert('Please enter valid amount');
+                    //     return false;
+                    // break;
                     case (main <= 1000000 ):
                         //per = 5;
                         amount = 30000;
@@ -227,7 +227,7 @@ $( "#commercial" ).on( "click", comercial_arbitaion );
                 var dec = dec + amount;
                 var discount = main - dec;
         var html = "<span>Registration Fee: <b>"+reg_fee+"</b></span><br>"+ 
-                    "<span> Administrative Fee: <b>"+discount+"</b></span><br>";
+                    "<span> Administrative Fee: <b>"+dec+"</b></span><br>";
                     //"<span>One Arbitrator's Fees (excluding expense): <b>"+main+"</b></span><br>";
                     $('#result_commercial').html(html);
              }
@@ -280,7 +280,7 @@ $( "#int_commercial" ).on( "click", intnational_comercial_arbitaion );
                 var dec = dec + amount;
                 var discount = main - dec;
         var html = "<span>Registration Fee: <b> $"+reg_fee+"</b></span><br>"+ 
-                    "<span> Administrative Fee: <b>"+discount+"</b></span><br>";
+                    "<span> Administrative Fee: <b>"+dec+"</b></span><br>";
                     //"<span>One Arbitrator's Fees (excluding expense): <b>"+main+"</b></span><br>";
                     $('#int_commercial').html(html);
              }
