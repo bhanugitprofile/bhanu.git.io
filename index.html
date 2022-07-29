@@ -49,9 +49,10 @@
                     per = 5;
                     arbitor_amount = 75000;
                     break;
-                case (main <= 5000000):
+                case (main > 1000000 && main <= 5000000):
                     per = 2.25;
                     amount = 50000;
+                    
                     arbitor_percentage = 5;
                     arbitor_amount = 75000;
                     break;
@@ -105,8 +106,10 @@
             var discount = main - dec;
 //For Arbitory
             var arbitor_dec = (arbitor_percentage / 100)*main; //its convert 10 into 0.10
-                var arbitor_decs = arbitor_dec + arbitor_amount;
-                var arbitor_discount = main - arbitor_decs;
+                 arbitor_decs = arbitor_dec + arbitor_amount;
+            var arbitor_discount = main - arbitor_decs;
+            //console.log(arbitor_desc);
+            
     var html = "<span>Registration Fee: <b>"+arbitor_decs+"</b></span><br>"+ 
                 "<span> Administrative Fee: <b>"+dec+"</b></span><br>";
                 //"<span>One Arbitrator's Fees (excluding expense): <b>"+arbitor_discount+"</b></span><br>";
@@ -124,8 +127,8 @@
                 var per = 0;
                 var amount = 0; 
                 var reg_fee = 500;
-                // var arbitor_percentage = 0;
-                // var arbitor_amount = 0;
+                var arbitor_percentage = 0;
+                var arbitor_amount = 0;
                 switch(true) {
                     // case (main < 75000):
                     //     alert('Please enter valid amount');
@@ -133,44 +136,51 @@
                     // break;
                     case (main <= 1000000):
                         per = 5;
+                        arbitor_percentage = 5;
                         break;
                     case (main <= 5000000):
                         per = 2.25;
                         amount = 50000;
-                        // arbitor_amount = 50000;
-                        // arbitor_percentage = 2.25;
+                        arbitor_amount = 50000;
+                        arbitor_percentage = 2.25;
                         break;
                     case (main <= 10000000):
                         per = 1.75;
                         amount = 1420000;
-                        // arbitor_amount = 1420000;
-                        // arbitor_percentage = 1.75;
+                        arbitor_amount = 1420000;
+                        arbitor_percentage = 1.75;
                         break;
                         case (main <= 50000000):
                         per = 0.80;
                         amount = 2,27,500;
-                        // arbitor_amount = 2,27,500;
-                        // arbitor_percentage = 0.80;
+                        arbitor_amount = 2,27,500;
+                        arbitor_percentage = 0.80;
                         break;
                         case (main <= 100000000):
                         per = 0.45;
                         amount = 5,47,500;
-                        // arbitor_amount = 5,47,500;
-                        // arbitor_percentage = 0.45;
+                        arbitor_amount = 5,47,500;
+                        arbitor_percentage = 0.45;
                         break;
                         case (main <= 500000000):
                         per = 0.20;
                         amount = 7,72,500;
+                        arbitor_amount = 7,72,500;
+                        arbitor_percentage = 0.20;
                         break;
                         case (main <= 1000000000):
                         per = 0.08;
                         amount = 15,72,500;
+                        arbitor_amount = 15,72,500;
+                        arbitor_percentage = 0.08;
                         break;
                         case (main <= 5000000000):
                         per = 0.05;
                         amount = 19,72,500;
+                        arbitor_amount = 19,72,500;
+                        arbitor_percentage = 0.05;
                         break;
-                        case (main > 5000000000):
+                        case (main > 500000000):
                         per = 0.05;
                         amount = 39,72,500;
                         break;
@@ -182,10 +192,10 @@
                     dec = dec + amount;
                 var discount = main - dec;
                 //For Arbitory
-                // var arbitor_dec = (arbitor_percentage / 100)*main; //its convert 10 into 0.10
-                // var arbitor_decs = arbitor_dec + arbitor_amount;
-                // var arbitor_discount = main - arbitor_decs;
-        var html = "<span>Registration Fee: <b> $"+reg_fee+"</b></span><br>"+ 
+                var arbitor_dec = (arbitor_percentage / 100)*main; //its convert 10 into 0.10
+                var arbitor_decs = arbitor_dec + arbitor_amount;
+                var arbitor_discount = main - arbitor_decs;
+        var html = "<span>Registration Fee: <b> "+arbitor_decs+"</b></span><br>"+ 
                     "<span> Administrative Fee: <b>"+dec+"</b></span><br>";
                     //"<span>One Arbitrator's Fees (excluding expense): <b>"+arbitor_discount+"</b></span><br>";
                     $('#result_international').html(html);
