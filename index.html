@@ -111,9 +111,6 @@
                 $('#result_domestic').html(html);
             }
         }
-
-
-
 // For international
              $( "#international" ).on( "click", international_arbitaion );
              function international_arbitaion(){
@@ -185,7 +182,7 @@
                     default:
                         alert('Please Enter correct amount');
                     }
-                    //For Admistrative
+            //For Admistrative
                 var dec = (per / 100)*main; //its convert 10 into 0.10
                     dec = dec + amount;
                 var discount = main - dec;
@@ -193,7 +190,7 @@
                 var arbitor_dec = (arbitor_percentage / 100)*main; //its convert 10 into 0.10
                     arbitor_decs = arbitor_dec + arbitor_amount;
                 var arbitor_discount = main - arbitor_decs;
-        var html = "<span>Registration Fee: <b> "+arbitor_decs+"</b></span><br>"+ 
+        var html = "<span>Registration Fee: <b> "+arbitor_decs+"</b></sp an><br>"+ 
                     "<span> Administrative Fee: <b>"+dec+"</b></span><br>";
                     $('#result_international').html(html);
              }
