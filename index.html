@@ -105,6 +105,10 @@
             var arbitor_dec = (arbitor_percentage / 100)*main; //its convert 10 into 0.10
                  arbitor_decs = arbitor_dec + arbitor_amount;
             var arbitor_discount = main - arbitor_decs;
+            if(arbitor_dec > 8500000){
+                alert('The amont limit to be 8500000');
+                return false;
+            }
     var html = "<span>Arbitrator Fee: <b>"+arbitor_decs.toFixed(2)+"</b></span><br>"+ 
                 "<span> Administrative Fee: <b>"+dec.toFixed(2)+"</b></span><br>";
                 //"<span>One Arbitrator's Fees (excluding expense): <b>"+arbitor_discount+"</b></span><br>";
