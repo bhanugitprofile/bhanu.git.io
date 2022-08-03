@@ -3,7 +3,7 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body> 
+<body>
     <h2>DOMESTIC ARBITRATION</h2>
     Insert Amount in Dispute (in Rupees)  : <input type="number" id="cBalance" value="">
         <button type="submit" onclick="domestic_arbitaion();" id="domestic">Calculate</button>
@@ -114,7 +114,6 @@
                 $('#result_domestic').html(html);
             }
         }
-
 // For international
              $( "#international" ).on( "click", international_arbitaion );
              function international_arbitaion(){
@@ -277,7 +276,7 @@
                     "<span> Administrative Fee: <b>"+dec.toFixed(2)+"</b></span><br>";
                     $('#result_domesitc_commercial').html(html);
              }
-                } 
+                }
 
 
 //For International Commercial
@@ -309,7 +308,7 @@
                     case (main <= 500000):
                         per = 0.60;
                         amount = 1500;
-                        arbitor_amount = '100+200 per hour';
+                        arbitor_amount = '1000+200 per hour';
                         break;
                     case (main <= 1000000):
                         per = 0.45;
@@ -352,7 +351,6 @@
                     $('#result_int_commercial').html(html);
                 }
             } 
-     </script> 
+     </script>
 </body>
 </html>
-
