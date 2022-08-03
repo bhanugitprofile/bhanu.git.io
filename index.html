@@ -106,8 +106,7 @@
                  arbitor_decs = arbitor_dec + arbitor_amount;
             var arbitor_discount = main - arbitor_decs;
             if(arbitor_dec > 8500000){
-                alert('The amont limit to be 8500000');
-                return false;
+                arbitor_decs = 8500000;
             }
     var html = "<span>Arbitrator Fee: <b>"+arbitor_decs.toFixed(2)+"</b></span><br>"+ 
                 "<span> Administrative Fee: <b>"+dec.toFixed(2)+"</b></span><br>";
